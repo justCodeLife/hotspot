@@ -1,0 +1,481 @@
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+	background-color:transparent !important;
+	-webkit-box-shadow: 0 0 0 100px #080808 inset;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff!important;
+    caret-color: #fff
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body,
+html {
+    font-size: 62.5%;
+    height: 100%;
+    overflow: hidden
+}
+
+@media (max-width:768px) {
+    body,
+    html {
+        font-size: 65%
+    }
+}
+
+@media (min-width:800px) and (max-width:900px) {
+    body,
+    html {
+        font-size: 130%
+    }
+}
+
+@media (min-width:720px) and (max-width:790px) {
+    body,
+    html {
+        font-size: 120%
+    }
+}
+
+@media (min-width:1080px) and (max-width:1200px) {
+    body,
+    html {
+        font-size: 150%
+    }
+}
+
+button,
+input {
+    outline: 0;
+    border: none;
+	background-color:transparent !important;
+}
+
+.cont {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    overflow: auto;
+    font-family: "Open Sans", Arial, sans-serif
+}
+
+.demo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15rem;
+    margin-top: -26.5rem;
+    width: 30rem;
+    height: 53rem;
+    overflow: hidden
+}
+
+.login {
+    border: 3px solid #06f;
+    position: relative;
+    height: 100%;
+    background-color: #080808;
+    -webkit-transition: opacity .1s, -webkit-transform .3s cubic-bezier(.17, -.65, .665, 1.25);
+    transition: opacity .1s, -webkit-transform .3s cubic-bezier(.17, -.65, .665, 1.25);
+    transition: opacity .1s, transform .3s cubic-bezier(.17, -.65, .665, 1.25);
+    transition: opacity .1s, transform .3s cubic-bezier(.17, -.65, .665, 1.25), -webkit-transform .3s cubic-bezier(.17, -.65, .665, 1.25);
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+.login__form {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 1.5rem 2.5rem;
+    text-align: center
+}
+
+.status__form {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 1.5rem 2.5rem;
+    text-align: center
+}
+
+.login__row {
+    height: 4rem;
+    padding-top: 1rem
+}
+
+.login__input {
+    display: inline-block;
+    width: 22rem;
+    height: 100%;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    background: 0 0;
+    color: #fdfcfd
+}
+
+.login__submit {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    margin: 5rem 0 2.2rem;
+    color: rgba(255, 255, 255, .8);
+    background: #f36;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: width .3s .15s, font-size .1s .15s;
+    transition: width .3s .15s, font-size .1s .15s
+}
+
+.login__submit:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px dotted #fff;
+    border-radius: 50%;
+    border-left: none;
+    border-bottom: none;
+    -webkit-transition: opacity .1s .4s;
+    transition: opacity .1s .4s;
+    opacity: 0
+}
+
+@-webkit-keyframes rotate {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes animatePath {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes animatePath {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+.btn {
+    background-color:#06f;
+	border-radius: 40px;
+    box-sizing: border-box;
+    border: 3px solid #06f;
+	color: #06f;
+	display: block;
+	font-family: IRANSans;
+	font-size:13px;
+	height: 80px;
+	letter-spacing: 1px;
+	margin: 3rem auto 2.2rem;
+    padding-top: 13px
+	padding: 4px;
+	position: relative;
+    text-decoration: none;
+	text-transform: uppercase;
+	width: 90%;
+	height:22%;
+	z-index: 2;
+}
+
+.btn:hover {
+	color: white;
+}
+
+.btn span {
+	align-items: center;
+	background: #080808;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	transition: background .5s ease;
+	width: 100%;
+}
+
+.btn:hover span {
+	background: #06f;
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/IRANSansWeb.eot);
+    src: url(../font/IRANSansWeb.eot?#iefix) format('embedded-opentype'), url(../font/IRANSansWeb.woff2) format('woff2'), url(../font/IRANSansWeb.woff) format('woff'), url(../font/IRANSansWeb.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/IRANSansWeb_Bold.eot);
+    src: url(../font/IRANSansWeb_Bold.eot?#iefix) format('embedded-opentype'), url(../font/IRANSansWeb_Bold.woff2) format('woff2'), url(../font/IRANSansWeb_Bold.woff) format('woff'), url(../font/IRANSansWeb_Bold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/IRANSansWeb.eot);
+    src: url(../font/IRANSansWeb.eot?#iefix) format('embedded-opentype'), url(../font/IRANSansWeb.woff2) format('woff2'), url(../font/IRANSansWeb.woff) format('woff'), url(../font/IRANSansWeb.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/IRANSansWeb_Bold.eot);
+    src: url(../font/IRANSansWeb_Bold.eot?#iefix) format('embedded-opentype'), url(../font/IRANSansWeb_Bold.woff2) format('woff2'), url(../font/IRANSansWeb_Bold.woff) format('woff'), url(../font/IRANSansWeb_Bold.ttf) format('truetype')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body,
+html {
+    height: 100%;
+    font-family: IRANSans
+}
+
+input {
+    outline: 0;
+    border: none
+}
+
+input:focus {
+    border-color: transparent!important
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+input:focus:-moz-placeholder {
+    color: transparent
+}
+
+input:focus::-moz-placeholder {
+    color: transparent
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+input::-webkit-input-placeholder {
+    color: #adadad
+}
+
+input:-moz-placeholder {
+    color: #adadad
+}
+
+input::-moz-placeholder {
+    color: #adadad
+}
+
+input:-ms-input-placeholder {
+    color: #adadad
+}
+
+button {
+    outline: 0!important;
+    border: none;
+    background: 0 0
+}
+
+button:hover {
+    cursor: pointer
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #f2f2f2
+}
+
+.wrap-login100 {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+	 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+
+}
+
+.login100-form {
+    width: 100%
+}
+
+.login100-form-title {
+    display: block;
+    font-family: IRANSans;
+    font-size: 30px;
+    color: #333;
+    line-height: 1.2;
+    text-align: center
+}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px
+}
+
+.input100 {
+    font-family: IRANSans;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: 0 0;
+    padding: 0 5px
+}
+
+@media (max-width:576px) {
+    .wrap-login100 {
+        padding: 77px 15px 33px 15px
+    }
+}
+
+.cssanimation,
+.cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+.cssanimation span {
+    display: inline-block
+}
+
+.hu__hu__ {
+    animation: hu__hu__ infinite 2s ease-in-out
+}
+
+@keyframes hu__hu__ {
+    50% {
+        transform: translateY(8px)
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px
+}
+
+.inp .label {
+    font-family: IRANSans;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    color: #9098a9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all .2s ease
+}
+
+.inp .border {
+    position: absolute;
+    top: 27px;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #07f;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all .15s ease
+}
+
+.inp input {
+    -webkit-appearance: none;
+    width: 95%;
+    border: 0;
+    font-family: IRANSans;
+    font-size: 14px;
+    color: #f5fffa;
+    padding: 12px 0;
+    height: 48px;
+    font-weight: 500;
+    border-bottom: 1px solid #c8ccd4;
+    background: 0 0;
+    border-radius: 0;
+    transition: all .15s ease
+}
+
+.inp input:not(:placeholder-shown)+span {
+    color: #5a667f;
+    transform: translateY(-26px) scale(.75)
+}
+
+.inp input:focus {
+    background: 0 0;
+    outline: 0
+}
+
+.inp input:focus+span {
+    color: #07f;
+    transform: translateY(-26px) scale(.75)
+}
+
+.inp input:focus+span+.border {
+    transform: scaleX(1)
+}

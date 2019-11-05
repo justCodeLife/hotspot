@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="fa" dir="rtl">
+
+<head>
+	<meta http-equiv="Content-Language" content="fa">
+	<title>Logout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="-1">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css">
+</head>
+//-->
+
+<body oncontextmenu="return false;">
+	<script language="JavaScript">
+		function openLogin() {
+			if (window.name != 'hotspot_logout') return true;
+			open('http://imu.ac.ir/login', '_blank', '');
+			window.close();
+			return false;
+		}
+	</script>
+	<div class="cont" style="background-color: #181818">
+		<div class="demo">
+			<div class="login">
+				<div class="status__form">
+					<img class="cssanimation hu__hu__ sequence" src="images/logo.png" width="45%" height="80%" />
+					<table width="100%" height="100%">
+						<tr>
+							<td align="center" valign="middle" style="font-size:15px">
+								<b style="font-family: IRANSans;color:white;">شما با موفقیت خارج شدید</b> <br><br>
+								<table class="tabula" border="0">
+									<tr>
+										<td style="font-family: IRANSans;color:white;" align="right">نام کاربری : </td>
+										<td dir="ltr" style="color:white;">$(username)</td>
+									</tr>
+									<tr>
+										<td style="font-family: IRANSans;color:white;" align="right">مک آدرس : </td>
+										<td dir="ltr" style="color:white;">$(mac)</td>
+									</tr>
+									<tr>
+										<td style="font-family: IRANSans;color:white;" align="right">آدرس آی پی : </td>
+										<td dir="ltr" style="color:white;">$(ip)</td>
+									</tr>
+									<tr>
+										<td style="font-family: IRANSans;color:white;" align="right">دانلود :
+										</td>
+										<td dir="ltr" style="color:white;">$(bytes-out-nice)</td>
+									</tr>
+									<tr>
+										<td style="font-family: IRANSans;color:white;" align="right">آپلود :
+										</td>
+										<td dir="ltr" style="color:white;">$(bytes-in-nice)</td>
+									</tr>
+									<tr>
+										<td style="font-family: IRANSans;color:white;" align="right">زمان اتصال : </td>
+										<td dir="ltr" style="color:white;">$(uptime)</td>
+									</tr>
+								</table>
+								$(if login-by-mac != 'yes')
+								<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+									<button class="btn" style="height:50px">
+										<span>ورود</span>
+									</button>
+									$(endif)
+								</form>
+							</td>
+					</table>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

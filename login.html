@@ -1,0 +1,85 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" lang="fa">
+
+<head>
+  <meta http-equiv="Content-Language" content="fa">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+  <link rel="stylesheet" type="text/css" href="css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css">
+  <script src="js/sweetalert2.min.js"></script>
+</head>
+
+<body oncontextmenu="return false;">
+  $(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
+  <script type="text/javascript" src="md5.js"></script>
+  <script type="text/javascript">
+    function doLogin() {
+      document.sendin.username.value = document.login.username.value;
+      document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+      document.sendin.submit();
+      return false;
+    }
+  </script>
+  $(endif)
+  <div class="cont" style="background-color: #181818">
+    <div class="demo">
+      <div class="login">
+        <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+          <div class="status__form">
+            <img class="cssanimation hu__hu__ sequence" src="images/logo.png" width="45%" height="80%" />
+            <div class="login__row">
+              <label for="inp" class="inp">
+                <input name="username" required="" type="text" id="inp" placeholder="&nbsp;">
+                <span class="label" style="font-size: 13px;">نام کاربری</span>
+                <span class="border"></span>
+              </label>
+            </div>
+            <div class="login__row">
+            </div>
+            <div class="login__row">
+              <label for="inp" class="inp">
+                <input name="password" type="password" id="inp" placeholder="&nbsp;" required=""
+                  autocomplete="new-password">
+                <span class="label" style="font-size: 13px">رمز عبور</span>
+                <span class="border"></span>
+              </label>
+            </div>
+            <div class="login__row">
+            </div>
+            <button class="btn">
+              <span>ورود</span>
+            </button>
+            $(if error)<br />
+            <div style="color: #FF8080; font-size: 13px;font-family: IRANSans;">
+              <script type="text/javascript">
+                var error = "$(error)";
+                Swal.fire({
+                  type: 'error',
+                  title: 'خطا',
+                  text: '$(error)'
+                })
+              </script>
+            </div>$(endif)
+            <br>
+            <p class="login__signup"><a href="#" style="font-family: IRANSans;font-size:12px;color: white">پنل کاربری</a></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
